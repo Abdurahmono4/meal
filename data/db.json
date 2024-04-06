@@ -1,0 +1,106 @@
+{
+  "recipies": [
+    {
+      "id": 1,
+      "title": "Osh",
+      "img": "../public/images/osh.png",
+      "ingredients": [
+        "guruch",
+        "sabzi",
+        "zira",
+        "go'sht",
+        "yog'",
+        "piyoz",
+        "tuz",
+        "suv"
+      ],
+      "cookingTime:": "60 minutes",
+      "method": "Lorem ipsum dolor sit amet cl nihil"
+    },
+    {
+      "id": "2",
+      "title": "Mastava",
+      "img": "../public/images/shorva.jpg",
+      "ingredients": [
+        "guruch",
+        "sabzi",
+        "zira",
+        "go'sht",
+        "yog'",
+        "piyoz",
+        "tuz",
+        "suv"
+      ],
+      "cookingTime:": "60 minutes",
+      "method": "Lorem ipsum dolor sit amet celit. "
+    },
+    {
+      "id": "3",
+      "title": "Dessert",
+      "img": "../public/images/dessert.jpg",
+      "ingredients": [
+        "guruch",
+        "sabzi",
+        "zira",
+        "go'sht",
+        "yog'",
+        "piyoz",
+        "tuz",
+        "suv"
+      ],
+      "cookingTime:": "60 minutes",
+      "method": "Lorem ipsum dolor sit amet  "
+    },
+    {
+      "id": "4",
+      "title": "Kabob",
+      "img": "../public/images/kabob.jpg",
+      "ingredients": [
+        "guruch",
+        "sabzi",
+        "zira",
+        "go'sht",
+        "yog'",
+        "piyoz",
+        "tuz",
+        "suv"
+      ],
+      "cookingTime:": "60 minutes",
+      "method": "Lorem ipsum dolor sit amet  "
+    },
+    {
+      "id": "5",
+      "title": "Manti",
+      "img": "../public/images/manti.jpg",
+      "ingredients": [
+        "guruch",
+        "sabzi",
+        "zira",
+        "go'sht",
+        "yog'",
+        "piyoz",
+        "tuz",
+        "suv"
+      ],
+      "cookingTime:": "60 minutes",
+      "method": "Lorem ipsum dolor sit amet  "
+    },
+    {
+      "id": "5",
+      "title": "Sweet",
+      "img": "../public/images/sweet.webp",
+      "ingredients": [
+        "guruch",
+        "sabzi",
+        "zira",
+        "go'sht",
+        "yog'",
+        "piyoz",
+        "tuz",
+        "suv"
+      ],
+      "cookingTime:": "60 minutes",
+      "method": "Lorem ipsum dolor sit amet "
+    }
+  ]
+}
