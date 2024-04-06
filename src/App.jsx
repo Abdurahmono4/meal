@@ -21,7 +21,11 @@ function App() {
       ],
     },
   ]);
-  return <RouterProvider router={routes} />;
+  return (
+    <div className="container ">
+      <RouterProvider router={routes} />;
+    </div>
+  );
 }
 
 export default App;
