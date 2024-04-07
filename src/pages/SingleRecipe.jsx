@@ -1,14 +1,31 @@
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+
 function SingleRecipe() {
+  const { id } = useParams();
+  const [recipie, setRecipie] = useState(null);
+  useEffect(() => {
+    fetch("http://localhost:3000/recipies" + id)
+      .then((data) => {
+        return data.json();
+      })
+      .then((recipie) => {
+        setRecipie(recipie);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [id]);
+
   return (
-    <>
-      <h1>Single page</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-        exercitationem doloribus, inventore neque asperiores voluptas dolorum
-        praesentium dolor repellendus culpa numquam atque! Illo doloremque
-        explicabo culpa nesciunt deleniti quidem pariatur?
-      </p>
-    </>
+    <div>
+      {recipie && (
+        <div className="w-full max-w-screen-lg mx-auto">
+          <h1 className="text-3xl font-bold text-center">{recipie.title}</h1>
+          <img className="w-full" src={recipie.image} alt="" />
+        </div>
+      )}
+    </div>
   );
 }
 

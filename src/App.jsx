@@ -17,7 +17,7 @@ function App() {
       children: [
         { path: "/", element: <Home /> },
         { path: "/create", element: <Create /> },
-        { path: "/recipe/:id", element: <SingleRecipe /> },
+        { path: "/singleRecipe/:id", element: <SingleRecipe /> },
       ],
     },
   ]);

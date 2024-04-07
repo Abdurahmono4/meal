@@ -8,7 +8,7 @@ function RecipiesList({ recipies }) {
           <div key={recipe.id} className="card w-80 h-96 bg-base-100 shadow-xl">
             <figure>
               <img
-                src={recipe.img}
+                src={recipe.image}
                 alt=" This is a Meal"
                 className="h-full w-full "
               />
@@ -18,7 +18,7 @@ function RecipiesList({ recipies }) {
               <p className="">{recipe.method}</p>
               <div className="card-actions ">
                 <Link
-                  to={`/data/${recipe.id}`}
+                  to={`/singleRecipe/${recipe.id}`}
                   className="btn btn-primary w-full"
                 >
                   Read More

@@ -15,19 +15,6 @@ function darkModeFromLocalStorage() {
 function Navbar() {
   const [theme, setTheme] = useState(darkModeFromLocalStorage());
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    setTheme(isDarkMode ? themes.dracula : themes.winter);
-    localStorage.setItem("mode", isDarkMode ? themes.dracula : themes.winter);
-  };
-
-  useEffect(() => {
-    document.body.classList.toggle("dark-mode", isDarkMode);
-  }, [isDarkMode]);
-
-  const handleClick = (e) => {
-    e.preventDefault();
-  };
 
   return (
     <div className="navbar mb-10">
@@ -43,7 +30,6 @@ function Navbar() {
           <label htmlFor="" className=" swap swap-rotate">
             <input
               type="checkbox"
-              onClick={handleClick}
               defaultChecked={theme == "winter " ? false : true}
             />
 
