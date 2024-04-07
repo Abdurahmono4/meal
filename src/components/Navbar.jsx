@@ -1,47 +1,41 @@
 import { Link } from "react-router-dom";
+
 import { IoSunnyOutline } from "react-icons/io5";
 import { IoMoonOutline } from "react-icons/io5";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const themes = {
   winter: "winter",
   dracula: "dracula",
 };
 
-function darkModeFromLocalStorage() {
+function darkMode() {
   return localStorage.getItem("mode") || themes.winter;
 }
 
 function Navbar() {
-  const [theme, setTheme] = useState(darkModeFromLocalStorage());
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [theme, setTheme] = useState(darkMode());
 
   return (
-    <div className="navbar mb-10">
-      <div className="max-w-screen-lg w-full  mx-auto flex justify-between items-center ">
-        <Link
-          className="btn btn-primary btn-lg font-bold text-2xl px-2 "
-          to="/"
-        >
-          MyK
+    <div className="flex justify-between max-w-screen-lg w-full mx-auto mt-10 btn-lg mb-10">
+      <Link to="/" className="btn btn-primary font-bold text-2xl">
+        myK
+      </Link>
+      <div className="flex gap-10 items-center">
+        <label className="swap swap-rotate">
+          {/* this hidden checkbox controls the state */}
+          <input type="checkbox" />
+
+          {/* sun icon */}
+          <IoSunnyOutline className="w-8 h-8 swap-on fill-current" />
+
+          {/* moon icon */}
+          <IoMoonOutline className="w-8 h-8 swap-off fill-current" />
+        </label>
+
+        <Link to="/create" className="btn btn-neutral">
+          Create
         </Link>
-
-        <div className="flex gap-10 items-center">
-          <label htmlFor="" className=" swap swap-rotate">
-            <input
-              type="checkbox"
-              defaultChecked={theme == "winter " ? false : true}
-            />
-
-            {/**sun icon */}
-            <IoSunnyOutline className="swap-on fill-current w-8 h-8" />
-            {/**moon icon */}
-            <IoMoonOutline className="swap-off fil-current w-8 h-8 " />
-          </label>
-          <Link className="btn btn-secondary" to="/create">
-            Create
-          </Link>
-        </div>
       </div>
     </div>
   );
