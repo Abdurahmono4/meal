@@ -18,7 +18,7 @@ function Home() {
   return (
     <div className="container  flex items-center flex-col  gap-32 ">
       {recipies && <RecipiesList recipies={recipies} />}
-      <span className="flex items-center gap-2 mt-16 mr-auto ml-auto">
+      <span className="flex items-center gap-2 mt-12 mr-auto ml-auto">
         Created by{" "}
         <a href="https://t.me/sherlock_20_04_00/" className="font-bold ">
           Olimjonov Rahmonjon

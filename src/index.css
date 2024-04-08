@@ -40,3 +40,40 @@ body {
   background-color: rgb(158, 141, 131);
   border: none;
 }
+
+.zero:hover {
+  background-color: rgb(158, 141, 131);
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgb(158, 141, 131);
+  transition: all cubic-bezier(0.55, 0.055, 0.675, 0.19) ease-in-out;
+  box-shadow: 0 10px 20px rgba(162, 217, 164, 0.19),
+    0 6px 6px rgba(118, 113, 37, 0.43);
+  transform: scale(1.03);
+  border-radius: 8px;
+}
+
+.cardAdd {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40vw;
+  background-color: rgb(255, 255, 255, 0.3);
+  border: none;
+  font: bold;
+  cursor: pointer;
+
+  transition: all cubic-bezier(0.55, 0.055, 0.675, 0.19) ease-in-out;
+  box-shadow: 0 10px 20px rgba(162, 217, 164, 0.32),
+    0 6px 6px rgba(108, 113, 37, 0.13);
+  transform: scale(1.03);
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 608px) {
+  .cardAdd {
+    width: 60%;
+  }
+}
