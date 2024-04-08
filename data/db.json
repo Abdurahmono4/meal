@@ -1,7 +1,7 @@
 {
   "recipies": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Osh",
       "image": "https://resto.uz/data/resto/43/4250/palovxon-osh-markazi-2874.jpg",
       "ingredients": [
@@ -50,6 +50,9 @@
       ],
       "cookingTime:": "60 minutes",
       "method": "Lorem ipsum dolor sit amet  "
+    },
+    {
+      "id": "1b5b"
     }
   ]
 }

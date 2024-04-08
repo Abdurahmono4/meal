@@ -44,18 +44,17 @@ function Create() {
     console.log(newRecipe);
   };
 
-  fetch("http://localhost:3000/recipies"),
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newRecipe),
-    }
-      .then(() => navigate("/"))
-      .catch((error) => {
-        console.log(error);
-      });
+  fetch("http://localhost:3000/recipies", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newRecipe),
+  })
+    .then(() => navigate("/"))
+    .catch((error) => {
+      console.log(error);
+    });
   console.log(newRecipe);
   return (
     <div className="cardAdd ">

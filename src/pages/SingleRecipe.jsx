@@ -5,7 +5,7 @@ function SingleRecipe() {
   const { id } = useParams();
   const [recipie, setRecipie] = useState(null);
   useEffect(() => {
-    fetch("http://localhost:3000/recipies" + id)
+    fetch("http://localhost:3000/recipies/" + id)
       .then((data) => {
         return data.json();
       })
