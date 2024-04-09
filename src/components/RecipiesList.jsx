@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { IoTrashOutline } from "react-icons/io5";
 
-function RecipiesList({ recipies }) {
+import { useState } from "react";
+function RecipiesList({ recipies, deleteRecipie }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
       {recipies.map((recipe) => {
@@ -13,16 +15,22 @@ function RecipiesList({ recipies }) {
                 className="h-full w-full "
               />
             </figure>
-            <div className="card-body w-full h-40">
+            <div className="card-body w-full h-40 ">
               <h2 className="card-title">{recipe.title}</h2>
               <p className="">{recipe.method}</p>
-              <div className="card-actions ">
+              <div className="card-actions  flex flex-nowrap ">
                 <Link
                   to={`/singleRecipe/${recipe.id}`}
-                  className="btn btn-primary w-full"
+                  className="btn btn-primary "
                 >
                   Read More
                 </Link>
+                <button
+                  className="btn btn-secondary  "
+                  onClick={() => deleteRecipie(recipe.id)}
+                >
+                  <IoTrashOutline />
+                </button>
               </div>
             </div>
           </div>
